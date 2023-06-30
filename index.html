@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solutionkb.secopslab.fi</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script defer src="loadtable.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid" style="padding:0 2em 0 2em;">
+        <div class="header">
+            <h1><a href="https://solutionkb.secopslab.fi">solutionkb.secopslab.fi</a></h1>
+            <p>A searchable database of <a href="https://learn.microsoft.com/en-us/azure/sentinel/overview">Microsoft Sentinel</a> Analytics Rule templates found in Content Hub Solutions.</p>
+        </div>
+        <div class="">
+
+            <table id="example" class="table table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th title="name">name</th>
+                        <th title="severity">severity</th>
+                        <th title="dataTypes">dataTypes</th>
+                        <th title="tactics">tactics</th>
+                        <th title="techniques">techniques</th>
+                        <th title="solution">solution</th>
+                        <th title="description">description</th>
+                        <th title="url">url</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>API - Account Takeover</td>
+                        <td>High</td>
+                        <td>apifirewall_log_1_CL</td>
+                        <td>CredentialAccess, Discovery</td>
+                        <td>T1110, T1087</td>
+                        <td>42Crunch API Protection</td>
+                        <td>42Crunch API protection against account takeover</td>
+                        <td><a
+                                href="https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/42Crunch%20API%20Protection/Analytic%20Rules/APIAccountTakeover.yaml">GitHub
+                                link</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>API - Anomaly Detection</td>
+                        <td>Low</td>
+                        <td>apifirewall_log_1_CL</td>
+                        <td>DefenseEvasion</td>
+                        <td> </td>
+                        <td>42Crunch API Protection</td>
+                        <td>42Crunch API protection anomaly detection'</td>
+                        <td><a
+                                href="https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/42Crunch%20API%20Protection/Analytic%20Rules/APIAnomalyDetection.yaml">GitHub
+                                link</a></td>
+
+                    </tr>
+
+                    <tr>
+                        <td>API - API Scraping</td>
+                        <td>High</td>
+                        <td>apifirewall_log_1_CL</td>
+                        <td>Reconnaissance, Collection</td>
+                        <td> </td>
+                        <td>42Crunch API Protection</td>
+                        <td>42Crunch API protection against API scraping</td>
+                        <td><a
+                                href="https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/42Crunch%20API%20Protection/Analytic%20Rules/APIAPIScaping.yaml">GitHub
+                                link</a></td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Password spray attack against ADFSSignInLogs </td>
+                        <td>Medium</td>
+                        <td>ADFSSignInLogs, Azure Activity</td>
+                        <td>CredentialAccess</td>
+                        <td>T1110</td>
+                        <td>Azure Active Directory</td>
+                        <td>'Identifies evidence of password spray activity against Connect Health for AD FS sign-in
+                            events by looking for failures from multiple accounts from the same IP address within a time
+                            window.
+                            Reference: https://adfshelp.microsoft.com/References/ConnectHealthErrorCodeReference'</td>
+                        <td><a
+                                href="https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules/ADFSSignInLogsPasswordSpray.yaml">GitHub
+                                link</a></td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Azure Active Directory Hybrid Health AD FS New Server</td>
+                        <td>Medium</td>
+                        <td>AzureActivity</td>
+                        <td>DefenseEvasion</td>
+                        <td>T1578</td>
+                        <td>Azure Activity</td>
+                        <td>'Identifies evidence of password spray activity against Connect Health for AD FS sign-in
+                            events by looking for failures from multiple accounts from the same IP address within a time
+                            window.
+                            Reference: https://adfshelp.microsoft.com/References/ConnectHealthErrorCodeReference'</td>
+                        <td><a
+                                href="https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Activity/Analytic%20Rules/AADHybridHealthADFSNewServer.yaml">GitHub
+                                link</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="footer">
+            <table>
+                <tr>
+                    <td>Updated:</td>
+                    <td>2023-06-25</td>
+                </tr>
+                <tr>
+                    <td>To-do:</td>
+                    <td>Add rule Description as collapsible column | Search per column | Hunting Query, Workbook and
+                        Playbook content types </td>
+                </tr>
+                <tr>
+                    <td>Contact:</td>
+                    <td>Mikko Koivunen, &lt;mikko@koivusec.fi&gt;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
